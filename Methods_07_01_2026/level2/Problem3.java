@@ -1,0 +1,25 @@
+// Write a program that takes a year as input and outputs the Year is a Leap Year or not
+
+import java.util.Scanner;
+
+public class Problem3 {
+    public static boolean isLeapYear(int year) {
+        if (year < 1582)
+            return false;
+        
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
+
+    @SuppressWarnings("ConvertToTryWithResources")
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+
+        if (isLeapYear(year))
+            System.out.println("Year is a Leap Year");
+        else
+            System.out.println("Year is not a Leap Year");
+
+        sc.close();
+    }
+}
