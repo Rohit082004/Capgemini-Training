@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class ReadandPrintCSV {
     public static void main(String[] args) {
-        String file = "/Students.csv";
+        String file = "D:\\ROHIT MAHAJAN\\Downloads\\ClassWorkCG\\src\\CSV_Data_Handling_09_02_2026\\Students.csv";
         try(BufferedReader br = new BufferedReader(new FileReader(file))){
-
+            br.readLine();
             String line;
 
             while((line = br.readLine()) != null){
